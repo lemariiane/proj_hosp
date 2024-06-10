@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar_Cirurgia</title>
+    <title>Cadastro paciente</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="css/nav.css">
     
 </head>
 <body>
@@ -28,7 +28,7 @@
 </header>
 
 <main class="container">        
-        <form method="post" action="controleCadastro_paciente.php">  <!-- onsubmit="gerarFicha(event)" -->
+        <form method="post" action="controleCadastro_paciente.php">
             <div class="form-group">
                 <h1>Cadastro Pacientes</h1>
                 <br><br>
@@ -109,32 +109,18 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text" id="ficha" name="ficha" readonly required>
-                    <label for="ficha">Número da ficha</label>
+                    <label for="ficha" id="ficha" name="ficha"></label>
                 </div>
 
                 <br><br><br>
 
                 <div class="form-group">
-                    <input type="submit" value="Cadastrar Paciente">
+                    <input type="submit" value="Cadastrar Paciente e gerar ficha">
                 </div>            
     </form>
 </main>
 
 <script>
-
-    function gerarNumeroFicha() {
-        return Math.floor(Math.random() * 1000000); 
-    }
-
-    function gerarFicha(event) {
-        event.preventDefault(); 
-
-        var inputFicha = document.getElementById('ficha');
-        var numeroFicha = gerarNumeroFicha();
-        inputFicha.value = numeroFicha; 
-    }
-
     function mascara(i){
         var v = i.value;
         

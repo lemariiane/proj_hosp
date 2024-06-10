@@ -1,13 +1,25 @@
+<?php require_once 'numcar.php' ?>
+<?php 
+
+    if(usuarioEstaLogado()) {
+        echo "Está Logado";
+        header("Location:index.php");
+
+    } else {
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Médicos</title>
+    <title>Portal</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <style>
         body {
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -97,7 +109,7 @@
 <body>
 
 <div class="form">
-    <form id="loginForm" method="post" action="">
+    <form id="loginForm" method="post" action="logando.php">
         <div class="box">
             <img src="img/grupouniaologin.png" alt="Logo">
             <input type="text" id="numcar" name="numcar" placeholder="Número da carteira">
@@ -106,22 +118,13 @@
         </div>
 
         <div class="box">
-            <input type="password" id="password" name="password" placeholder="Senha">
+            <input type="password" id="password" name="senha" placeholder="Senha">
             <div class="message" id="password-message"></div>
-            <br><br>
-        </div>
-
-        <div class="relembrar-senha">
-            <a href="Relembrar_senha.php">Esqueci minha senha</a>
             <br><br>
         </div>
 
         <button type="submit" class="btn btn-dark">Entrar</button>
         <br>
-
-        <div class="registrar">
-            <p>Não tem uma conta? <a href="Cadastro.php">Criar conta</a></p>
-        </div>
     </form>
 </div>
 
@@ -158,3 +161,5 @@
 
 </body>
 </html>
+
+<?php }?>

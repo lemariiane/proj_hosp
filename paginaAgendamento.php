@@ -6,6 +6,11 @@
     <title>Página Agendamento</title>
     <link rel="stylesheet" href="nav.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,7 +35,7 @@
 
 
 <main class="container">
-    <form action="#">
+    <form action="controlePagina_agendamento.php">
         <div class="form-group">
             
             <h1>Agendamento</h1><br><br>
@@ -44,17 +49,19 @@
         <div class="form-group">
             <select id="departamento" name="departamento" required>
                 <option value="">Selecione o Departamento</option>
-                <option value="cirurgia_geral">Cirurgia Geral - Dra. Maria Eduarda</option>
-                <option value="ortopedia">Ortopedia - Dr. Leandro</option>
-                <option value="neurologia">Neurologia - Dr.Flavio</option>
-                <option value="pediatria">Pediatria - Dra. Isabela</option>
+                <option value="cirurgia_geral" name="cirurgia_geral" >Cirurgia Geral - Dra. Cintia</option>
+                <option value="ortopedia" name="ortopedia" >Ortopedia - Dr. Leandro</option>
+                <option value="neurologia" name="neurologia" >Neurologia - Dr.Flavio</option>
+                <option value="pediatria" name="pediatria" >Pediatria - Dra. Isabela</option>
             </select>
             <div class="message"></div>
             <br><br>
         </div>
+
         <div class="form-group">
-            <input type="submit" value="Iniciar Agendamento" href="agendamento.php">
+            <input type="submit" value="Iniciar Agendamento">
         </div>
+
     </form>
 </main>
 

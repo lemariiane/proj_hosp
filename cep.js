@@ -22,6 +22,6 @@ function buscaCep(){
 }
 
 window.onload = function(){
-    let cep= odcumment.getElementById("cep");
+    let cep= documment.getElementById("cep");
     cep.addEventListener("blur", buscaCep);
 }
