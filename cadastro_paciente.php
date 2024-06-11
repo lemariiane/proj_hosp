@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro paciente</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="nav.css">
     
 </head>
 <body>
@@ -16,7 +16,7 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a class="nav-link" href="index.php"><strong>Menu</strong></a></li>
                 <li class="nav-item"><a class="nav-link" href="cadastro_paciente.php"><strong>Cadastrar paciente</strong></a></li>
-                <li class="nav-item"><a class="nav-link" href="paginaAgendamento.php"><strong>Agendamento de cirurgia</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="agendamento.php"><strong>Agendamento de cirurgia</strong></a></li>
             </ul>
     
             <div class="nav-ham">

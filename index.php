@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendar_Cirurgia</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/Página-Inicial2.css" media="screen">
+    
     <style>
         header{
             box-shadow: 5px 5px 10px #001a247c;
@@ -130,6 +130,27 @@
             color:#afaeaea2;
         }
     }
+    #imagem{
+        margin-top:15%;
+        margin-left:20%;
+        border: 5px solid #406979be; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.1s; 
+    }
+    #imagem:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
+}
+    footer{
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #012e40d5;
+    margin-top: 7%;
+    }
         
     </style>
 </head>
@@ -143,7 +164,7 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a class="nav-link" href="index.php"><strong>Menu</strong></a></li>
                 <li class="nav-item"><a class="nav-link" href="cadastro_paciente.php"><strong>Cadastrar paciente</strong></a></li>
-                <li class="nav-item"><a class="nav-link" href="paginaAgendamento.php"><strong>Agendamento de cirurgia</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="agendamento.php"><strong>Agendamento de cirurgia</strong></a></li>
             </ul>
     
             <div class="nav-ham">
@@ -155,23 +176,20 @@
     </header>
 </div>
    
-<section class="u-clearfix u-container-align-center u-section-2" id="sec-3526">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-expanded-width u-products u-products-1" data-site-sorting-prop="created" data-site-sorting-order="desc" data-products-datasource="site" data-items-per-page="3" data-products-id="1">
-          <div class="u-list-control"></div>
+<main>
 
-          <div class="u-repeater u-repeater-1">
-            <div class="u-align-center u-container-align-center u-container-style u-products-item u-repeater-item" data-product-id="4">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                <a class="u-product-title-link" href="listarCadastro_paciente.php">
-                    <img id="imagem" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-product-control u-image-1" src="img/listarpacientes.jpg"></a>
-              </div>
-            </div>
-          </div>
-          <div class="u-list-control"></div>
-        </div>
-      </div>
-    </section>
+<a href="listarCadastro_paciente.php">
+<img id="imagem" alt="" src="img/ah.jpg"></a>
+
+<a href="desloga.php">
+<img id="imagem" alt="" src="img/sair.jpg"></a>
+
+</main>
+
+
+<footer>
+<?php echo 'Usuário - ' . usuariologado();?>
+</footer>
 
 <script>
     const ham = document.querySelector(".nav-ham");

@@ -5,7 +5,6 @@
     } 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,18 +16,25 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-        .menu {
-            background-color: #333;
+            background-image: url('img/backambulancia.jpg');
+            background-size: cover;
             overflow: hidden;
         }
+        .menu {
+            background-color: black;
+            width: 200px; /* Largura fixa para o menu */
+            height: 100vh; /* Altura total da viewport */
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px; /* Espaço no topo */
+        }
         .menu a {
-            float: left;
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding: 14px;
             text-decoration: none;
+            margin: 4px 0; /* Espaço entre os links */
         }
         .menu a:hover {
             background-color: #ddd;
@@ -39,30 +45,31 @@
             color: white;
         }
         .menu a#sair {
-            float: left;
             color: red;
+        }
+        .signup-link {
+            margin: 4px 0; /* Espaço entre os links */
+        }
+        .menu .user-info {
+            color: white;
+            padding: 14px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
 <div class="menu">
-    
-    <a href="deslogar.php" id="sair">Sair</a>
-</div>
-
-<div style="padding-left:16px">
-    <h2>Conteúdo</h2>
-    <?php echo 'Você acessou como ' . usuariologado();?>
-
-</div>
-
-<div class="signup-link">
-            <a href="novoCadastro.php">Novo Cadastro</a>
-</div>
-
-<div class="signup-link">
-            <a href="novoNumcar.php">Novo Cadastro de funcionários</a>
+    <div class="user-info">
+        <?php echo 'Usuário - ' . usuariologado();?>
+    </div>
+    <div class="signup-link">
+        <a href="novoCadastro.php">Novo Cadastro</a>
+    </div>
+    <div class="signup-link">
+        <a href="novoNumcar.php">Novo cadastro de funcionários</a>
+    </div>
+    <a href="deslogar.php" id="sair">Desconectar</a>
 </div>
 
 </body>
